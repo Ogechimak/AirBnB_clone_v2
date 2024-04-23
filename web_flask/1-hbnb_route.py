@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module - this iis a script that starts a Flask web application"""
+"""This script starts a Flask web application"""
 from flask import Flask
 app = Flask(__name__)
 
@@ -9,10 +9,12 @@ def hello_hbnb():
     """Handles the root url"""
     return 'Hello HBNB!'
 
+
 @app.route('/hbnb', strict_slashes=False)
 def hbnb():
     """Handles hbnb route"""
     return 'HBNB'
+
 
 if __name__ == '__main__':
     app.run("0.0.0.0", 5000)
